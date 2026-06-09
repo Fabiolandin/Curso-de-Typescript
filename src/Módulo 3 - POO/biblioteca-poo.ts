@@ -16,7 +16,7 @@ export class Biblioteca {
 
 export class Livro {
 
-    public disponivel: boolean
+    private disponivel: boolean
 
     constructor(
         public titulo: string,
