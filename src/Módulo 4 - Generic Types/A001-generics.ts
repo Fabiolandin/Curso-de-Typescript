@@ -1,3 +1,6 @@
+//Generics são como variaveis de tipo. voce cria uma função que funciona com qualquer tipo
+//mas mantém a informação de qual tipo especifico foi usado.
+
 type FilterCallback = (
     value: unknown, 
     index?: number, 
@@ -5,8 +8,9 @@ type FilterCallback = (
 ) => boolean;
 
 
-export function meuFilter(array: unknown[], callbackfn: FilterCallback): unknown{
-    const newArray = [];
+//n ta funcionando
+export function meuFilter<T>(array: T[], callbackfn: (value: T) => boolean): T[] {
+    const newArray: T[] = [];
 
     for (let i = 0; i < array.length; i++){
         if(callbackfn(array[i])){
