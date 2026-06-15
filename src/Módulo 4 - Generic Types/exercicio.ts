@@ -4,7 +4,7 @@ type VotationOption = {
     option: string,
 }
 
-//
+// GERENCIA UMA VOTAÇÃO ESPECÍFICA (título + lista de opções + votos)
 export class Votation{
     //array com as opções
     private _votationOptions: VotationOption[] = []
@@ -30,7 +30,7 @@ export class Votation{
     }
 }
 
-//gerencia multiplas votações
+// GERENCIA MÚLTIPLAS VOTAÇÕES (coleção de enquetes)
 export class VotationApp {
     //array que guarda várias enquetes
     private votations: Votation[] = [];
