@@ -1,5 +1,4 @@
-// Seu conceito de "linguagem" = VotationOption do professor
-export class linguagem{  // 👈 Isso é tipo VotationOption
+export class linguagem{ 
     constructor(
         public nome: string,
         public votos: number
