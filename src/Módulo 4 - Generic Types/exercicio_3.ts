@@ -24,14 +24,14 @@ export class Biblioteca{
 
     emprestarLivro(indice: number): void{
         if(!this.livros[indice]){
-            console.log('Livro não encontrado!')
+            console.log('Livro não encontrado!');
+            return;
+        } 
+        if(this.livros[indice].quantidade > 0){
+            this.livros[indice].quantidade --
+            console.log('Livro emprestado com sucesso! Quantidade disponivel:' + this.livros[indice].quantidade)
         } else{
-            if(this.livros[indice].quantidade > 0){
-                this.livros[indice].quantidade --
-                console.log('Livro emprestado com sucesso! Quantidade disponivel:' + this.livros[indice].quantidade)
-            } else{
-                console.log('O livro não está disponivel para empréstimo')
-            }
+            console.log('O livro não está disponivel para empréstimo')
         }
     }
 
