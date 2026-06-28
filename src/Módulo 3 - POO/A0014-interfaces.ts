@@ -1,4 +1,5 @@
 //Interface - utilizada pra modelar objetos
+//Ela especifica quais propriedades e métodos um objeto deve ter
 
 interface TipoPessoa {
     nome: string;
